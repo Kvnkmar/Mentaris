@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentaris | Intelligent Recruitment Solutions</title>
+    <meta name="description" content="Sharper insights. Better hires. Powered by SPOT Ai intelligence.">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Mentaris | Intelligent Recruitment Solutions">
+    <meta property="og:description" content="Sharper insights. Better hires. Powered by SPOT Ai intelligence.">
+    <meta property="og:type" content="website">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fonts: Satoshi for Headers, Montserrat for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Premium Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="38" stroke="url(#gradient1)" stroke-width="2" stroke-dasharray="240" stroke-dashoffset="240" class="preloader-circle">
+                        <animate attributeName="stroke-dashoffset" from="240" to="0" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#08D8C9;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#06B8AB;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="preloader-m">M</div>
+            </div>
+            <div class="preloader-text-wrapper">
+                <span class="preloader-text">MENTARIS</span>
+                <div class="preloader-progress-bar">
+                    <div class="preloader-progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Animated Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+    <div class="grain-overlay"></div>
+    
+    <!-- Premium Navigation -->
+    <nav class="navbar-luxury">
+        <div class="navbar-content">
+            <a href="#" class="logo-container">
+                <span class="logo-text-header">MENTARIS</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#services" class="nav-link-luxury">Services</a>
+                <a href="#spotai" class="nav-link-luxury">SPOT Ai</a>
+                <a href="#contact" class="nav-link-luxury">Contact</a>
+                <a href="#contact" class="btn-luxury-nav">
+                    <span class="btn-text">Begin Your Journey</span>
+                    <span class="btn-shine"></span>
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#spotai" class="mobile-nav-link">SPOT Ai</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="#contact" class="button-primary btn-mobile">Begin Your Journey</a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero_section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-content fade-reveal">
+                <div class="hero-label">Intelligence Refined</div>
+                <h1 class="heading-xl">
+                    Intelligence Behind<br>
+                    Every Hire.
+                </h1>
+                <p class="hero-subtitle">
+                    Recruitment powered by intelligence — not guesswork.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="button-primary btn-large">
+                        <span class="btn-content">
+                            <span class="btn-text">Find Talent</span>
+                            <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                        </span>
+                        <span class="btn-glow"></span>
+                        <span class="btn-shine"></span>
+                    </a>
+                    <a href="#services" class="button-secondary btn-large">
+                        <span class="btn-text">Discover Opportunities</span>
+                        <span class="btn-border"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-logo-animation fade-reveal">
+                <div id="logoAnimation" class="logo-neural"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to Explore</span>
+        </div>
+    </section>
+    
+    <!-- Value Proposition Section (feature_grid) -->
+    <section class="section-dark">
+        <div class="container-max">
+            <div class="section-intro fade-reveal">
+                <span class="section-label">Our Philosophy</span>
+                <h2 class="heading-l">We See What Others Miss</h2>
+                <div class="divider-luxury"></div>
+                <p class="body-m">
+                    In an era where talent acquisition defines competitive advantage, we combine 
+                    the precision of artificial intelligence with the nuance of human expertise.
+                </p>
+            </div>
+            
+            <div class="grid-4">
+                <div class="value-card-luxury fade-reveal">
+                    <div class="value-number">01</div>
+                    <div class="value-icon-luxury">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="value-title">AI-Enhanced Intelligence</h3>
+                    <p class="value-description">
+                        Advanced algorithms meticulously analyze thousands of data points, 
+                        identifying candidates with exceptional potential for success.
+                    </p>
+                </div>
+                
+                <div class="value-card-luxury fade-reveal">
+                    <div class="value-number">02</div>
+                    <div class="value-icon-luxury">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="value-title">Speed with Accuracy</h3>
+                    <p class="value-description">
+                        Rapid, high-fidelity candidate shortlists for critical positions, 
+                        delivering speed without compromising quality or alignment.
+                    </p>
+                </div>
+                
+                <div class="value-card-luxury fade-reveal">
+                    <div class="value-number">03</div>
+                    <div class="value-icon-luxury">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="value-title">Quality Over Quantity</h3>
+                    <p class="value-description">
+                        We prioritize caliber over volume, presenting only those candidates 
+                        who demonstrate exceptional alignment with your vision.
+                    </p>
+                </div>
+                
+                <div class="value-card-luxury fade-reveal">
+                    <div class="value-number">04</div>
+                    <div class="value-icon-luxury">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Human Expertise Where It Counts</h3>
+                    <p class="value-description">
+                        Seasoned consultants provide intuition, negotiation expertise, and 
+                        strategic counsel where human insight proves irreplaceable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section (service_cards) -->
+    <section id="services" class="section-light">
+        <div class="container-max">
+            <div class="section-intro fade-reveal">
+                <span class="section-label">Our Services</span>
+                <h2 class="heading-l">Intelligent Recruitment Solutions Built for Growth.</h2>
+                <div class="divider-luxury"></div>
+                <p class="body-m">
+                    From executive searches to mass recruitment, we deliver precision and 
+                    results across all hiring landscapes.
+                </p>
+            </div>
+            
+            <div class="grid-3 service_cards">
+                <a href="#contact" class="service-card-premium fade-reveal">
+                    <div class="service-icon-premium">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="service-title-premium">Executive Recruitment</h3>
+                    <p class="service-description-premium">
+                        Precision placement of engineers, developers, and technology specialists with proven technical excellence and 
+                        strong cultural alignment to drive lasting impact.
+                    </p>
+                    <span class="service-link-premium">
+                        Explore More
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+                
+                <a href="#contact" class="service-card-premium fade-reveal">
+                    <div class="service-icon-premium">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title-premium">Technical Recruitment</h3>
+                    <p class="service-description-premium">
+                        Precision placement of engineers, developers, and technology specialists 
+                        who possess both technical mastery and cultural compatibility.
+                    </p>
+                    <span class="service-link-premium">
+                        Explore More
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+                
+                <a href="#contact" class="service-card-premium fade-reveal">
+                    <div class="service-icon-premium">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title-premium">Mass Hiring</h3>
+                    <p class="service-description-premium">
+                        Large-scale recruitment campaigns managed with efficiency and quality, 
+                        delivering volume without sacrificing candidate caliber.
+                    </p>
+                    <span class="service-link-premium">
+                        Explore More
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+            
+            <div class="explore-services-wrapper">
+                <a href="#contact" class="button-primary btn-large">
+                    <span class="btn-content">
+                        <span class="btn-text">Explore Services</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                    </span>
+                    <span class="btn-glow"></span>
+                    <span class="btn-shine"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==================== SPOT Ai Section ==================== -->
+    <section id="spotai" class="spotai-section section-spacer">
+        <div class="spotai-background"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 fade-reveal">
+                    <div class="section-label mb-4">Powered by SPOT Ai™</div>
+                    <h2 class="heading-l mb-4">Intelligence Behind Every Hire</h2>
+                    <p class="body-m mb-5">
+                        SPOT AI™ is our proprietary recruitment intelligence platform that revolutionizes talent acquisition.
+                        By analyzing skill compatibility, behavioral patterns, and cultural alignment, we deliver candidates
+                        who don't just meet requirements — they exceed expectations and drive measurable business outcomes.
+                    </p>
+
+                    <div class="pillars-container mb-5 fade-reveal">
+                        <div class="pillar-item mb-4">
+                            <div class="pillar-icon-wrapper">
+                                <i class="bi bi-gear"></i>
+                            </div>
+                            <div class="pillar-content">
+                                <h4>Skill Fit</h4>
+                                <p>Advanced assessment of technical capabilities and expertise alignment with role requirements</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-item mb-4">
+                            <div class="pillar-icon-wrapper">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <div class="pillar-content">
+                                <h4>Behaviour Fit</h4>
+                                <p>Deep analysis of work style, collaboration patterns, and team dynamics compatibility</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-item">
+                            <div class="pillar-icon-wrapper">
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <div class="pillar-content">
+                                <h4>Cultural Fit</h4>
+                                <p>Comprehensive evaluation of values, organizational alignment, and long-term potential</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 fade-reveal">
+                    <div class="metrics-container">
+                        <div class="metrics-header text-center mb-4">
+                            <h3 class="heading-m mb-2">Measurable Impact</h3>
+                            <p class="body-m text-muted">Proven results that transform hiring outcomes</p>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="metric-box">
+                                    <div class="metric-value">40<span class="metric-symbol">%</span></div>
+                                    <div class="metric-label">Faster Time-to-Hire</div>
+                                    <p class="metric-desc">Accelerated placement process</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="metric-box">
+                                    <div class="metric-value">500<span class="metric-symbol">+</span></div>
+                                    <div class="metric-label">Successful Placements</div>
+                                    <p class="metric-desc">Across diverse industries</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="metric-box">
+                                    <div class="metric-value">95<span class="metric-symbol">%</span></div>
+                                    <div class="metric-label">Client Satisfaction</div>
+                                    <p class="metric-desc">Consistently exceptional service</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="metric-box">
+                                    <div class="metric-value">92<span class="metric-symbol">%</span></div>
+                                    <div class="metric-label">High Retention</div>
+                                    <p class="metric-desc">Long-term placement success</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Trust Section ==================== -->
+    <section class="trust-section section-spacer">
+        <div class="container">
+            <div class="text-center mb-5 pb-4 fade-reveal">
+                <h2 class="heading-l mb-4">Trusted by Forward-Thinking Organizations</h2>
+                <p class="section-description mx-auto">
+                    Leading companies across industries rely on our expertise for their most critical hiring needs.
+                </p>
+            </div>
+
+            <div class="row justify-content-center g-4 fade-reveal">
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-microsoft"></i></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-google"></i></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-amazon"></i></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-meta"></i></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-apple"></i></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-facebook"></i></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-salesforce"></i></div></div>
+                <div class="col-lg-3 col-md-4 col-6"><div class="trust-logo"><i class="fab fa-youtube"></i></div></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact CTA Section (cta_banner) -->
+    <section id="contact" class="cta_banner">
+        <div class="contact-overlay"></div>
+        <div class="container-max">
+            <div class="contact-wrapper">
+                <div class="contact-header fade-reveal">
+                    <span class="section-label-light">Begin Your Transformation</span>
+                    <h2 class="contact-title">Ready to Find the Ones Who Matter?</h2>
+                    <p class="contact-subtitle">
+                        Schedule a confidential consultation to discover how Mentaris can deliver
+                        unparalleled insights and exceptional outcomes for your organization.
+                    </p>
+                </div>
+
+                <!-- Premium Contact Form -->
+                <div class="contact-form-container fade-reveal">
+                    <form class="premium-contact-form" id="contactForm" action="https://formsubmit.co/kvnkmar012@gmail.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Mentaris Inquiry">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://kvnkmar.github.io/Mentaris/thankyou.html">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName" class="form-label">
+                                    <i class="fas fa-user"></i>
+                                    Full Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    class="form-input"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+                                <span class="input-border"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="your.email@company.com"
+                                    required
+                                >
+                                <span class="input-border"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company" class="form-label">
+                                    <i class="fas fa-building"></i>
+                                    Company Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    class="form-input"
+                                    placeholder="Your company name"
+                                    required
+                                >
+                                <span class="input-border"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">
+                                    <i class="fas fa-phone"></i>
+                                    Phone Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    class="form-input"
+                                    placeholder="Phone Number"
+                                    required
+                                >
+                                <span class="input-border"></span>
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment-dots"></i>
+                                    Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-textarea"
+                                    rows="5"
+                                    placeholder="Tell us about your hiring needs and how we can help..."
+                                    required
+                                ></textarea>
+                                <span class="input-border"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit-premium">
+                                <span class="btn-submit-content">
+                                    <span class="btn-submit-text">Send Your Inquiry</span>
+                                    <i class="fas fa-arrow-right btn-submit-icon"></i>
+                                </span>
+                                <span class="btn-submit-glow"></span>
+                                <span class="btn-submit-shine"></span>
+                            </button>
+                        </div>
+
+                        <p class="form-privacy-note">
+                            <i class="fas fa-lock"></i>
+                            Your information is confidential and will never be shared with third parties.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (footer_global) -->
+    <footer class="footer_global">
+        <div class="container-max">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo-link">
+                        <span class="footer-logo-text">MENTARIS</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Sharper insights. Better outcomes.<br>
+                        Intelligence behind every hire.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-wrapper">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#">Executive Recruitment</a>
+                        <a href="#">Technical Recruitment</a>
+                        <a href="#">Mass Hiring</a>
+                        <a href="#">SPOT Ai Platform</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Our Philosophy</a>
+                        <a href="#">Case Studies</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Career</h4>
+                        <a href="#">Join Our Team</a>
+                        <a href="#">Open Positions</a>
+                        <a href="#">Life at Mentaris</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="/cdn-cgi/l/email-protection#4a222f2626250a272f243e2b38233964292527"><span class="__cf_email__" data-cfemail="a6cec3cacac9e6cbc3c8d2c7d4cfd588c5c9cb">[email&#160;protected]</span></a>
+                        <a href="#">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mentaris. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat Button -->
+    <a 
+  href="https://wa.me/60127725417?text=Hi!%20I%20need%20support%20from%20your%20team."
+  class="whatsapp-button"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+  role="button"
+>
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span class="whatsapp-tooltip" aria-hidden="true">
+        Need support?<br>Chat with our team!
+    </span>
+</a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
