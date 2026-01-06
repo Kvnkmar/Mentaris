@@ -297,18 +297,15 @@ document.head.appendChild(animationStyles);
 
 // ==================== Navbar Scroll Effect ====================
 const navbar = document.querySelector('.navbar-luxury');
-let lastScroll = 0;
 
 function handleNavbarScroll() {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 80) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
-    lastScroll = currentScroll;
 }
 
 
@@ -650,12 +647,3 @@ window.addEventListener('load', () => {
 
 // Set initial body opacity
 document.body.style.opacity = '0';
-
-// ==================== Resize Handler ====================
-let resizeTimeout;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        // Handle any resize-specific logic here
-    }, 250);
-});

@@ -242,10 +242,6 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.logo-container:hover {
-    /* Hover animation removed */
-}
-
 .logo-icon {
     height: 24px;
     width: auto;
@@ -405,10 +401,6 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: color 0.3s ease;
-}
-
-.mobile-nav-link:hover {
-    /* Hover animation removed */
 }
 
 /* ==================== CLIENT-FIRST BUTTONS ==================== */
@@ -1587,10 +1579,6 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.footer-logo-link:hover {
-    /* Hover animation removed */
-}
-
 .footer-logo-icon {
     margin-right: 8px;
     flex-shrink: 0;
@@ -1700,10 +1688,6 @@ body {
     font-size: 13px;
     transition: color 0.3s ease;
     font-weight: 300;
-}
-
-.footer-legal a:hover {
-    /* Hover animation removed */
 }
 
 .footer-legal span {
