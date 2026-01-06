@@ -248,6 +248,11 @@ body {
     /* Hover animation removed */
 }
 
+.logo-icon {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
 .logo-text-header {
     font-family: var(--font-header);
     font-size: 24px;
