@@ -249,9 +249,9 @@ body {
 }
 
 .logo-icon {
-    height: 32px;
+    height: 24px;
     width: auto;
-    margin-right: 10px;
+    margin-right: 8px;
     flex-shrink: 0;
 }
 
