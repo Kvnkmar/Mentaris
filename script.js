@@ -121,180 +121,6 @@ if (canvas && ctx) {
     animateParticles();
 }
 
-// ==================== Logo Neural Animation ====================
-function createLogoAnimation() {
-    const container = document.getElementById('logoAnimation');
-    if (!container) return;
-    
-    // Determine if mobile and adjust size accordingly
-    const isMobile = window.innerWidth <= 768;
-    const baseSize = isMobile ? 200 : 500;
-    const centerX = baseSize / 2;
-    const centerY = baseSize / 2;
-    const radius = isMobile ? 60 : 150;
-    const nodeCount = 12;
-    
-    // Set container dimensions
-    container.style.width = baseSize + 'px';
-    container.style.height = baseSize + 'px';
-    container.style.position = 'relative';
-    
-    const nodes = [];
-    
-    // Clear container
-    container.innerHTML = '';
-    
-    // Create outer nodes
-    for (let i = 0; i < nodeCount; i++) {
-        const angle = (i / nodeCount) * Math.PI * 2;
-        const x = centerX + Math.cos(angle) * radius;
-        const y = centerY + Math.sin(angle) * radius;
-        
-        const nodeSize = isMobile ? 8 : 12;
-        const node = document.createElement('div');
-        node.className = 'neural-node';
-        node.style.cssText = `
-            position: absolute;
-            width: ${nodeSize}px;
-            height: ${nodeSize}px;
-            background: #08D8C9;
-            border-radius: 50%;
-            box-shadow: 0 0 20px #08D8C9;
-            left: ${x}px;
-            top: ${y}px;
-            transform: translate(-50%, -50%);
-            animation: pulse 2s ease-in-out infinite;
-            animation-delay: ${i * 0.15}s;
-        `;
-        container.appendChild(node);
-        nodes.push({x, y, element: node});
-    }
-    
-    // Create inner ring nodes
-    const innerRadius = isMobile ? 32 : 80;
-    const innerNodeCount = 6;
-    for (let i = 0; i < innerNodeCount; i++) {
-        const angle = (i / innerNodeCount) * Math.PI * 2 + Math.PI / 6;
-        const x = centerX + Math.cos(angle) * innerRadius;
-        const y = centerY + Math.sin(angle) * innerRadius;
-        
-        const innerNodeSize = isMobile ? 6 : 8;
-        const node = document.createElement('div');
-        node.className = 'neural-node-inner';
-        node.style.cssText = `
-            position: absolute;
-            width: ${innerNodeSize}px;
-            height: ${innerNodeSize}px;
-            background: #08D8C9;
-            border-radius: 50%;
-            box-shadow: 0 0 15px #08D8C9;
-            left: ${x}px;
-            top: ${y}px;
-            transform: translate(-50%, -50%);
-            animation: pulse 2.5s ease-in-out infinite;
-            animation-delay: ${i * 0.2 + 0.5}s;
-        `;
-        container.appendChild(node);
-        nodes.push({x, y, element: node, inner: true});
-    }
-    
-    // Create center node
-    const centerNodeSize = isMobile ? 16 : 24;
-    const centerNode = document.createElement('div');
-    centerNode.style.cssText = `
-        position: absolute;
-        width: ${centerNodeSize}px;
-        height: ${centerNodeSize}px;
-        background: #08D8C9;
-        border-radius: 50%;
-        box-shadow: 0 0 40px #08D8C9, 0 0 80px rgba(8, 216, 201, 0.3);
-        left: ${centerX}px;
-        top: ${centerY}px;
-        transform: translate(-50%, -50%);
-        animation: centerPulse 3s ease-in-out infinite;
-    `;
-    container.appendChild(centerNode);
-    
-    // Create connections
-    nodes.forEach((node, i) => {
-        // Connect to center
-        createConnection(node.x, node.y, centerX, centerY, container, node.inner);
-        
-        // Connect outer nodes to each other
-        if (!node.inner) {
-            const nextIndex = (i + 1) % 12;
-            if (!nodes[nextIndex].inner) {
-                createConnection(node.x, node.y, nodes[nextIndex].x, nodes[nextIndex].y, container);
-            }
-        }
-    });
-    
-    // Connect inner to outer
-    nodes.filter(n => n.inner).forEach((innerNode, i) => {
-        const outerNode = nodes.filter(n => !n.inner)[i * 2];
-        if (outerNode) {
-            createConnection(innerNode.x, innerNode.y, outerNode.x, outerNode.y, container, true);
-        }
-    });
-}
-
-function createConnection(x1, y1, x2, y2, container, isInner = false) {
-    const connection = document.createElement('div');
-    const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-    const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
-    
-    connection.style.cssText = `
-        position: absolute;
-        width: ${length}px;
-        height: 1px;
-        background: rgba(8, 216, 201, ${isInner ? 0.2 : 0.25});
-        left: ${x1}px;
-        top: ${y1}px;
-        transform-origin: left center;
-        transform: rotate(${angle}deg);
-        animation: connectionPulse 3s ease-in-out infinite;
-        animation-delay: ${Math.random() * 2}s;
-    `;
-    
-    container.appendChild(connection);
-}
-
-// Add animation styles
-const animationStyles = document.createElement('style');
-animationStyles.textContent = `
-    @keyframes pulse {
-        0%, 100% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1;
-        }
-        50% {
-            transform: translate(-50%, -50%) scale(1.4);
-            opacity: 0.6;
-        }
-    }
-    
-    @keyframes centerPulse {
-        0%, 100% {
-            transform: translate(-50%, -50%) scale(1);
-            box-shadow: 0 0 40px #08D8C9, 0 0 80px rgba(8, 216, 201, 0.3);
-        }
-        50% {
-            transform: translate(-50%, -50%) scale(1.15);
-            box-shadow: 0 0 60px #08D8C9, 0 0 120px rgba(8, 216, 201, 0.4);
-        }
-    }
-    
-    @keyframes connectionPulse {
-        0%, 100% {
-            opacity: 0.25;
-        }
-        50% {
-            opacity: 0.6;
-        }
-    }
-`;
-document.head.appendChild(animationStyles);
-
 // ==================== Navbar Scroll Effect ====================
 const navbar = document.querySelector('.navbar-luxury');
 
@@ -578,9 +404,6 @@ function handleScrollToTopVisibility() {
 
 // ==================== Initialize Everything ====================
 function init() {
-    // Initialize logo animation
-    createLogoAnimation();
-
     // Initialize fade reveal
     initFadeReveal();
 
@@ -608,15 +431,7 @@ function init() {
         handleNavbarScroll();
         handleScrollToTopVisibility();
     });
-    
-    // Handle window resize for logo animation (mobile orientation changes)
-    window.addEventListener('resize', () => {
-        const container = document.getElementById('logoAnimation');
-        if (container) {
-            createLogoAnimation();
-        }
-    });
-    
+
     // Cursor trail (throttled)
     let throttleTimer;
     document.addEventListener('mousemove', (e) => {
@@ -627,7 +442,7 @@ function init() {
             }, 60);
         }
     });
-    
+
     // Initial calls
     handleNavbarScroll();
 }
