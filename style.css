@@ -736,9 +736,33 @@ body {
 }
 
 .dot-3 {
-    animation: dotOrbit3 20s linear infinite, dotPulse 2s ease-in-out infinite 1s;
+    animation: dotOrbit3 28s linear infinite, dotPulse 2s ease-in-out infinite 1s;
+    width: 8px;
+    height: 8px;
+}
+
+.dot-4 {
+    animation: dotOrbit4 28s linear infinite reverse, dotPulse 2s ease-in-out infinite 1.5s;
     width: 6px;
     height: 6px;
+}
+
+.dot-5 {
+    animation: dotOrbit5 28s linear infinite, dotPulse 2s ease-in-out infinite 0.3s;
+    width: 7px;
+    height: 7px;
+}
+
+.dot-6 {
+    animation: dotOrbit6 20s linear infinite, dotPulse 2s ease-in-out infinite 0.8s;
+    width: 5px;
+    height: 5px;
+}
+
+.dot-7 {
+    animation: dotOrbit7 20s linear infinite reverse, dotPulse 2s ease-in-out infinite 1.2s;
+    width: 4px;
+    height: 4px;
 }
 
 /* Center logo */
@@ -810,10 +834,46 @@ body {
 
 @keyframes dotOrbit3 {
     from {
+        transform: rotate(0deg) translateX(140px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(140px) rotate(-360deg);
+    }
+}
+
+@keyframes dotOrbit4 {
+    from {
+        transform: rotate(120deg) translateX(140px) rotate(-120deg);
+    }
+    to {
+        transform: rotate(480deg) translateX(140px) rotate(-480deg);
+    }
+}
+
+@keyframes dotOrbit5 {
+    from {
+        transform: rotate(240deg) translateX(140px) rotate(-240deg);
+    }
+    to {
+        transform: rotate(600deg) translateX(140px) rotate(-600deg);
+    }
+}
+
+@keyframes dotOrbit6 {
+    from {
         transform: rotate(0deg) translateX(110px) rotate(0deg);
     }
     to {
         transform: rotate(360deg) translateX(110px) rotate(-360deg);
+    }
+}
+
+@keyframes dotOrbit7 {
+    from {
+        transform: rotate(180deg) translateX(110px) rotate(-180deg);
+    }
+    to {
+        transform: rotate(540deg) translateX(110px) rotate(-540deg);
     }
 }
 
@@ -1930,6 +1990,19 @@ body {
         width: 120px;
     }
 
+    .dot-4, .dot-5 {
+        width: 6px;
+        height: 6px;
+    }
+    .dot-6 {
+        width: 4px;
+        height: 4px;
+    }
+    .dot-7 {
+        width: 3px;
+        height: 3px;
+    }
+
     @keyframes dotOrbit1 {
         from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
         to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
@@ -1939,8 +2012,24 @@ body {
         to { transform: rotate(360deg) translateX(145px) rotate(-360deg); }
     }
     @keyframes dotOrbit3 {
+        from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+    }
+    @keyframes dotOrbit4 {
+        from { transform: rotate(120deg) translateX(120px) rotate(-120deg); }
+        to { transform: rotate(480deg) translateX(120px) rotate(-480deg); }
+    }
+    @keyframes dotOrbit5 {
+        from { transform: rotate(240deg) translateX(120px) rotate(-240deg); }
+        to { transform: rotate(600deg) translateX(120px) rotate(-600deg); }
+    }
+    @keyframes dotOrbit6 {
         from { transform: rotate(0deg) translateX(95px) rotate(0deg); }
         to { transform: rotate(360deg) translateX(95px) rotate(-360deg); }
+    }
+    @keyframes dotOrbit7 {
+        from { transform: rotate(180deg) translateX(95px) rotate(-180deg); }
+        to { transform: rotate(540deg) translateX(95px) rotate(-540deg); }
     }
 
     .grid-4 {
@@ -2116,9 +2205,53 @@ body {
         height: 6px;
     }
 
-    .dot-3 {
+    .dot-3, .dot-5 {
+        width: 6px;
+        height: 6px;
+    }
+
+    .dot-4 {
         width: 5px;
         height: 5px;
+    }
+
+    .dot-6 {
+        width: 4px;
+        height: 4px;
+    }
+
+    .dot-7 {
+        width: 3px;
+        height: 3px;
+    }
+
+    @keyframes dotOrbit1 {
+        from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+    @keyframes dotOrbit2 {
+        from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+    }
+    @keyframes dotOrbit3 {
+        from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+    @keyframes dotOrbit4 {
+        from { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
+        to { transform: rotate(480deg) translateX(100px) rotate(-480deg); }
+    }
+    @keyframes dotOrbit5 {
+        from { transform: rotate(240deg) translateX(100px) rotate(-240deg); }
+        to { transform: rotate(600deg) translateX(100px) rotate(-600deg); }
+    }
+    @keyframes dotOrbit6 {
+        from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+    }
+    @keyframes dotOrbit7 {
+        from { transform: rotate(180deg) translateX(80px) rotate(-180deg); }
+        to { transform: rotate(540deg) translateX(80px) rotate(-540deg); }
     }
 
     .heading-l {
